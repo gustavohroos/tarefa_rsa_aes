@@ -1,0 +1,5 @@
+descriptografar chave publica
+openssl aes-256-cbc -d -a -nosalt -pass file:key_for_rsa_public.dec -in key_public.en -out public.key
+
+descriptografar message.en
+openssl aes-256-cbc -d -a -nosalt -pass file:aes_key.txt -in message.en -out message.dec
